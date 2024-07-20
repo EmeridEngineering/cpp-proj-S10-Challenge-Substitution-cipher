@@ -48,13 +48,16 @@ int main() {
         //if character is not found use the orignal character else use key.at(alphabet_index) and push back to the encrypted message string
     }
     std::cout << "The encrypted message is: " << encrypted_message << std::endl;
+
+    std::string decrypted_message {};
+    for (auto c: encrypted_message){
+        size_t key_index = key.find(c);
+        decrypted_message.push_back( (key_index == std::string::npos)?c:alphabet.at(key_index) ); 
+        //if character is not found use the orignal character else use alphabet.at(key_index) and push back to the decrypted message string
+    }
+    std::cout << "The decrypted message is: " << decrypted_message << std::endl;
     
     /*Pseudo-code
-    Go through the encrypted message string using range-base for loop 
-        use each character as an input for key.find method to get the index in the key
-        if character is found use alphabet.at(alphabet_index) else use the orignal character and push back to the decrypted message string 
-    display the decrypted message
-
     display comparison of initial and decrypted message
     */
     
