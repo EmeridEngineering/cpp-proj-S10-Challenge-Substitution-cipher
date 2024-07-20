@@ -41,13 +41,15 @@ int main() {
     std::cout << "Provide the message to encrypt: ";
     std::getline(std::cin,original_message);
 
+    std::string encrypted_message {};
+    for (auto c: original_message){
+        size_t alphabet_index = alphabet.find(c);
+        encrypted_message.push_back( (alphabet_index == std::string::npos)?c:key.at(alphabet_index) ); 
+        //if character is not found use the orignal character else use key.at(alphabet_index) and push back to the encrypted message string
+    }
+    std::cout << "The encrypted message is: " << encrypted_message << std::endl;
+    
     /*Pseudo-code
-    create the string for encrypted message
-    Go through the message string using range-base for loop 
-        use each character as an input for alphabet.find method to get the index in the alphabet
-        if character is found use key.at(alphabet_index) else use the orignal character and push back to the encrypted message string 
-    display the encrypted message
-
     Go through the encrypted message string using range-base for loop 
         use each character as an input for key.find method to get the index in the key
         if character is found use alphabet.at(alphabet_index) else use the orignal character and push back to the decrypted message string 
