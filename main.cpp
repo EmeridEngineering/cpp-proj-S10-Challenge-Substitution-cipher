@@ -58,11 +58,6 @@ int main() {
     std::cout << "The decrypted message is: " << decrypted_message << std::endl;
     
     /*Pseudo-code
-    Go through the encrypted message string using range-base for loop 
-        use each character as an input for key.find method to get the index in the key
-        if character is found use alphabet.at(alphabet_index) else use the orignal character and push back to the decrypted message string 
-    display the decrypted message
-
     display comparison of initial and decrypted message
     */
     
