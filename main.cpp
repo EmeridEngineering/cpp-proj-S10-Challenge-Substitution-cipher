@@ -57,9 +57,8 @@ int main() {
     }
     std::cout << "The decrypted message is: " << decrypted_message << std::endl;
     
-    /*Pseudo-code
-    display comparison of initial and decrypted message
-    */
+    std::cout << std::boolalpha;
+    std::cout << original_message << " and " << decrypted_message << " are the same: " << (original_message == decrypted_message);
     
     std::cout << std::endl;
     return 0;
