@@ -36,6 +36,25 @@ int main() {
 
     std::string alphabet {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
     std::string key {"XZNLWEBGJHQDYVTKFUOMPCIASRxznlwebgjhqdyvtkfuompciasr"};
+
+    /*Pseudo-code
+    create a string to store the message
+    prompt the user for the message
+    save the message in the string
+
+    create the string for encrypted message
+    Go through the message string using range-base for loop 
+        use each character as an input for alphabet.find method to get the index in the alphabet
+        use key.at(alphabet_index) and push back to the encrypted message string
+    display the encrypted message
+
+    Go through the encrypted message string using range-base for loop 
+        use each character as an input for key.find method to get the index in the key
+        use alphabet.at(alphabet_index) and push back to the decrypted message string
+    display the decrypted message
+
+    display comparison of initial and decrypted message
+    */
     
     std::cout << "Default Template." << std::endl;
     return 0;
